@@ -9,6 +9,19 @@ return {
     },
     lazy = false,
     keys = {
-        { "<leader>e", "<cmd>Neotree<cr>" }
+        { "<leader>e", "<cmd>Neotree position=float<cr>" },
+        { "<leader>b", "<cmd>Neotree source=buffers position=float<cr>" },
+    },
+    opt = {
+        event_handlers = {
+            {
+                event = "file_opened",
+
+                handler = function(file_path)
+                    -- auto close
+                    retuire("neo-tree").close_all()
+                end
+            }
+        }
     }
 }
