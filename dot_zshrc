@@ -19,6 +19,22 @@ if command -v fzf &> /dev/null; then
   source <(fzf --zsh)
 fi
 
+# History
+setopt share_history
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+## word
+autoload -Uz select-word-style
+select-word-style default
+zstyle ':zle:*' word-chars " /=;@:{},|"
+zstyle ':zle:*' word-style unspecified
+
 # PATH
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
