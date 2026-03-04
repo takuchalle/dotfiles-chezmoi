@@ -16,7 +16,6 @@ return {
         event_handlers = {
             {
                 event = "file_opened",
-
                 handler = function(file_path)
                     -- auto close
                     retuire("neo-tree").close_all()
