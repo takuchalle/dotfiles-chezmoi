@@ -1,0 +1,40 @@
+{
+  "icon_theme": "Catppuccin Mocha",
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha",
+  },
+  // Vim
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "scrollbar": {
+    "show": "never",
+  },
+
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+          "extraArgs": ["--target-dir", "target/ra"],
+        },
+      },
+    },
+  },
+  // 言語ごとにカスタマイズしたかったらここに書く
+  "languages": { "Rust": { "format_on_save": "on" } },
+}
