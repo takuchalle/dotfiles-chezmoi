@@ -10,11 +10,19 @@
     "light": "One Light",
     "dark": "Catppuccin Mocha",
   },
-  // Vim
+  // Vim Setting
   "vim_mode": true,
   "relative_line_numbers": "enabled",
   "scrollbar": {
     "show": "never",
+  },
+  "vim": {
+    "use_system_clipboard": "always",
+  },
+  "format_on_save": "on",
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
   },
 
   "inlay_hints": {
